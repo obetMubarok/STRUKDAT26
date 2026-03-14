@@ -7,7 +7,6 @@ class Node{
     public Node(int data) {
         this.data = data;
     }
-    
 }
 
 class MyLinkedList{
@@ -57,15 +56,20 @@ class MyLinkedList{
         return false;
     }
     public void remove(int key){
+        //asumsi linkedlist tidak kosong
         Node current = first;
-        while(current != null){
-            if(current.next.data == key){
-                current.next = current.next.next;
-                if(key == last.data)
-                    last = current;
-                break;
+        if(first.data == key){
+            removeFirst();
+        }else{
+            while(current != null){
+                if(current.next.data == key){
+                    current.next = current.next.next;
+                    if(key == last.data)
+                        last = current;
+                    break;
+                }
+                current = current.next;
             }
-            current = current.next;
         }
     }
     public void reset(){
@@ -95,8 +99,8 @@ public class NewClass {
         ll.addFirst(20);
         ll.addFirst(10);
         ll.addLast(60);
-        
-        System.out.println(ll.getIndex(50));
+        ll.remove(60);
+        ll.printAll();
         
     }
 }
