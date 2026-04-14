@@ -22,7 +22,7 @@ class MyQueue{
     }
     public void insert(int data){
         if(!isFull()){
-            if(rear == maxSize-1)
+            if(rear == maxSize-1)//circular
                 rear = -1;
             array[++rear] = data;
             nItem++;
