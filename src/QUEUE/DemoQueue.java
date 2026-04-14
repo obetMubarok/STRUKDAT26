@@ -68,6 +68,8 @@ public class DemoQueue {
         mq.insert(90);
         mq.insert(100);
         
+        
+        
         mq.leave(2);
         mq.print();
         
