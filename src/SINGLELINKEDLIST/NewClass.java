@@ -93,9 +93,12 @@ public class NewClass {
     public static void main(String[] args) {
         MyLinkedList ll = new MyLinkedList();
         
-        ll.addFirst(50);
+        ll.addFirst(10);
         ll.addFirst(40);
-        ll.addFirst(30);
+        ll.addFirst(20);
+        ll.addLast(40);
+        ll.reset();
+        ll.getIndex(50);
         ll.addFirst(20);
         ll.addFirst(10);
         ll.addLast(60);
