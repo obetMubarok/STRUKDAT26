@@ -10,6 +10,7 @@ class Myhash{
     public int hashFunction(int key){
         return key % size;
     }
+    
     public void insert(int key){
         int index = hashFunction(key);
         data[index] = key;
@@ -17,6 +18,7 @@ class Myhash{
     public void print(){
         for(int i=0; i<size; i++)
             System.out.print(data[i]+" ");
+       //if else
     }
     public void remove(int key){
         int index = hashFunction(key);
